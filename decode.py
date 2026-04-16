@@ -1,0 +1,9 @@
+import pandas as pd
+import re
+
+# Check hex codes
+print("Decoding hex values:")
+hex_codes = ['0x48/0x65/0x61', '0x4e/0x6f/0x72', '0x47/0x6f/0x6f', '0x46/0x69/0x6e', '0x42/0x69/0x6f']
+for h in hex_codes:
+    chars = [chr(int(x, 16)) for x in h.split('/')]
+    print(f"  {h} = {''.join(chars)}")
